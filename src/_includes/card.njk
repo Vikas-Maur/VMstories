@@ -1,0 +1,16 @@
+<div class="card">
+      
+    <div class="card-left">
+      <h2><a href="{{ story.url }}">{{ story.data.title }} </a></h2>
+
+      <h3 class="short-desc">{{ story.data.description }}</h3>
+
+      <a href="{{ story.url }}" class="read-story">Read the story</a>
+
+    </div>
+    <div class="card-right">
+        {% if story.data.img %}
+            <a href="{{ story.url }}"><img src="{{ story.data.img }}" alt="{{ story.data.imgAlt }}"></a>
+        {% endif %}
+    </div>
+</div>

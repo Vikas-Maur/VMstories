@@ -1,0 +1,17 @@
+---
+title: VMs | Stories By Vikas | Home
+description: Hello world
+layout: 'base.njk'
+header: [<link rel="stylesheet" href="/css/cards.css">]
+---
+
+<div id="all-stories" class="card-section">
+
+
+  {% for story in collections.story | reverse %}
+
+    {% include 'card.njk' %}
+
+  {% endfor %}
+  
+</div>
