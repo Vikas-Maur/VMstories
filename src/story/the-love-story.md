@@ -1,6 +1,7 @@
 ---
 title: The Love Story - By Vikas
 description: A love Story
+url: the-love-story
 ---
 
 # The Love Story | By Vikas
