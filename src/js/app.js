@@ -1,9 +1,10 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('nav .nav-links');
+const analytics = firebase.analytics();
 
-hamburger.addEventListener('click',()=>{
-    navLinks.classList.toggle('hide-nav-links')
-});
+const perf = firebase.performance();
+
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
 
 function SignedIn(user){
     signInButtons.forEach(button=>{
@@ -33,8 +34,6 @@ const signInButtons = document.querySelectorAll('.sign-in');
 const signOutButtons = document.querySelectorAll('.sign-out');
 const signedIn = document.querySelectorAll('.signed-in');
 const userImgSections = document.querySelectorAll('.user-img');
-const auth = firebase.auth();
-const provider = new firebase.auth.GoogleAuthProvider();
 
 signInButtons.forEach(button=>{
     button.addEventListener('click',async ()=>{
