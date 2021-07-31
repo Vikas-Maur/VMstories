@@ -1,0 +1,40 @@
+.content-area{
+    width: var(--content-width);
+    max-width: 75ch;
+    margin: 2rem auto;
+    margin-bottom: 200px;
+}
+
+.content-area *{
+    margin-bottom: var(--mb-normal);
+}
+
+.content-area h1,
+.content-area h2,
+.content-area h3{
+    text-transform: capitalize;
+}
+
+.content-area h1{
+    font-size: 3rem;
+    margin-bottom: calc(var(--mb-normal) + 0.5rem);
+    color: var(--primary);
+    text-align: center;
+}
+
+.content-area h2{
+    color: white;
+    font-size: 1.9rem;
+}
+
+.content-area h3{
+    font-weight: normal;
+    color: white;
+    font-size: 1.4rem;
+}
+
+@media (max-width:700px){
+    .content-area h1{
+        font-size: 2.5rem;
+    }
+}

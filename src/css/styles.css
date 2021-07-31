@@ -1,0 +1,261 @@
+:root{
+    --primary: #027A60;
+    --dark: #12181b;
+    --dark2: #2a2e35;
+    --shadow: rgba(0,0,0,0.7) 0px 5px 20px 0px;
+    --mb-normal: 1.3rem;
+    --mx-normal: 0.5rem;
+
+    --nav-bg: var(--dark);
+    --nav-width: 80%;
+
+    --nav-link-z: 2;
+    --nav-other-items-z: 3;
+    
+    --body-family: 'Nunito', sans-serif;
+    --body-color: rgba(255,255,255,0.7);
+
+    --content-width: 60%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+::selection{
+    background-color: var(--primary);
+    color: white;
+}
+
+body{
+    font-family: var(--body-family);
+    color: var(--body-color);
+    background-color: var(--dark);
+    overflow-x: hidden;
+}
+
+/* General */
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+}
+
+p{
+    margin-bottom: var(--mb-normal);
+    line-height: 2rem;
+}
+
+.container{
+    width: var(--content-width);
+    margin: auto;
+}
+
+.large-mb{
+    margin-bottom: 20px;
+}
+
+.d-none{
+    display: none;
+}
+
+/* Navbar */
+
+header{
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    background-color: var(--nav-bg);
+    box-shadow: var(--shadow);
+    margin-bottom: var(--mb-normal);
+}
+
+.navbar{
+    display: flex;
+    width: var(--nav-width);
+    height: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-name a{
+    color: var(--primary);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-name a:hover{
+    color: var(--body-color);
+    background-color: var(--primary);
+}
+
+.brand-name a svg{
+    width: 50px;
+    height: 50px;
+}
+
+.brand-name a small{
+    font-size: 0.7em;
+    margin-left: 10px;
+}
+
+.nav-links{
+    margin: auto 1rem;
+    display: flex;
+}
+
+.nav-link{
+    margin: auto var(--mx-normal);
+}
+
+.nav-link a{
+    display: block;
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.nav-link a:hover{
+    color: white;
+    background-color: var(--primary);
+}
+
+.hamburger{
+    display: none;
+    width: 35px;
+    height: 35px;
+}
+
+.sign-in{
+    background: url('/assets/google-dark.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    width: 191px;
+    height: 45px;
+    transition: all 300ms ease-in-out;
+    margin: 0 var(--mx-normal);
+}
+
+.sign-in:hover{
+    transform: scale(1.1);
+}
+
+.sign-in:active{
+    background: url('/assets/google-light.png');
+}
+
+.sign-out{
+    background-color: transparent;
+    color: white;
+    padding: 0.2rem;
+    border: 2px solid var(--primary);
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.sign-out:hover{
+    background-color: var(--primary);
+}
+
+.sign-out img{
+    margin-right: var(--mx-normal);
+    width: 35px;
+    height: 35px;
+}
+
+.error-404{
+    color: crimson !important;
+    text-align: center;
+}
+
+.go-to-homepage{
+    display: inline-block;
+    padding: 0.8rem;
+    background-color: var(--primary);
+    color: white;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+}
+.go-to-homepage:hover{
+    text-decoration: underline;
+}
+
+/* Media queries */
+
+
+@media (max-width:1000px){
+
+    :root{
+        --content-width: 85%;
+    }
+
+    nav *{
+        z-index: var(--nav-other-items-z);
+    }
+
+    .nav-links{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: var(--nav-link-z);
+        background-color: var(--dark2);
+        transition: all 1s ease-in-out;
+
+        -webkit-clip-path: circle(91.3% at 34% 37%);
+        clip-path: circle(91.3% at 34% 37%);
+    }
+    .hide-nav-links{
+        -webkit-clip-path: circle(0.2% at 0 0);
+        clip-path: circle(0.2% at 0 0);   
+    }
+
+    .nav-link{
+        width: 80%;
+        margin: var(--mb-normal) auto;
+        font-size: 2rem;
+        overflow: hidden;
+    }
+
+    .nav-link:nth-child(1){
+        margin-top: 100px;
+        margin-bottom: var(--mb-normal);
+    }
+
+    .nav-link a{
+        text-align: start;
+    }
+    
+    .hamburger{
+        display: block;
+    }
+
+    .sign-in{
+        width: 210px;
+        height: 50px;   
+    }
+
+}
+
+@media(max-width: 320px){
+    .brand-name{
+        font-size: 0.8rem;
+    }
+}
