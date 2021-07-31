@@ -4,7 +4,7 @@ description: A test Story
 url: a-test-story
 ---
 
-# The Text Story Story | By Vikas
+# The Text Story | By Vikas
 
 ## Context
 

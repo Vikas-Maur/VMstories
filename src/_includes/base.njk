@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:url" content="https://vm-stories.web.app/{{ url }}">
@@ -14,7 +17,12 @@
     <!-- <meta name="twitter:card" content="summary"></meta>
     <meta name="twitter:creator" content="@Vikas76781960"></meta> -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
     <title>{{ title }}</title>
+    
     <meta name="description" content="{{ description }}">
     <link rel="stylesheet" href="/css/styles.css">
     {% for head in header %}
@@ -23,6 +31,12 @@
 
     <!-- PWA Stuff -->
     <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#12181b">
+
+    <!-- IOS SUPPORT -->
+    <link rel="apple-touch-icon" href="/assets/manifest-icon-192.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#12181b">
+
 
 </head>
 

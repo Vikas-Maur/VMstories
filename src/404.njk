@@ -1,0 +1,28 @@
+---
+title: VMs | Stories By Vikas | 404 Page
+description: This is 404 Page For VMs | Stories by vikas
+layout: 'base.njk'
+url: '/404.html'
+permalink: "404.html"
+header: [<link rel="stylesheet" href="/css/cards.css">]
+---
+
+<div class="container large-mb">
+    <h1 class="large-mb error-404">404 ERROR (or) $)$ ERROR 😥</h1>
+    <h2 class="large-mb">SORRY !!! BUT THE URL DOES NOT EXISTS  😟.</h2>
+    <h2 class="large-mb">BUT NO WORRIES 😊 . <br> GO TO HOMEPAGE (OR) START READING A STORY.</h2>
+
+    <a class="go-to-homepage" href="/">GO TO HOMEPAGE</a>
+</div>
+
+<div id="all-stories" class="card-section">
+
+    <h1 style="text-align: center;">Or Read A Story</h1>
+
+  {% for story in collections.story | reverse %}
+
+    {% include 'card.njk' %}
+
+  {% endfor %}
+  
+</div>
