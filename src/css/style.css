@@ -1,0 +1,154 @@
+:root{
+    --primary: rgb(0, 128, 128);
+    --lighter-primary: rgba(0,128,128,0.7);
+
+    --shadow : rgba(0, 0, 0, 0.7) 0px 0px 20px 1px;
+}
+
+body{
+    font-family: "Nunito",sans-serif;
+    overflow-x: hidden;
+}
+
+::selection{
+    background-color: var(--primary);
+    color: white;
+}
+
+.text-lighter{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-myprimary{
+    background-color: var(--primary);
+}
+
+.text-myprimary{
+    color: var(--primary);
+}
+
+.btn-myprimary{
+    background-color: var(--primary);
+}
+
+.btn-myprimary:hover{
+    background-color: var(--lighter-primary);
+}
+
+.navbar-brand{
+    color: var(--primary) !important;
+}
+
+.navbar-brand svg{
+    width: 40px;
+    height: 40px;
+}
+
+.navbar a{
+    overflow: hidden;
+    position: relative;
+}
+.navbar a::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: -10px;
+    height: 3px;
+    width: 0%;
+    background-color: var(--primary);
+    transition: width 500ms ease-in-out;
+}
+
+.navbar a:hover::after{
+    width: 110%;
+}
+
+.my-shadow{
+    box-shadow:  var(--shadow);
+}
+
+.section-label .under-line{
+    height: 4px;
+    width: 10%;
+    background-color: var(--primary);
+}
+
+#wrapper{
+    margin-bottom: 200px;
+}
+
+#story-cards .card{
+    transition: transform 300ms ease-in-out;
+}
+
+#story-cards .card:hover{
+    transform: translateY(-5%);
+}
+
+#content{
+    max-width: 60ch;
+    font-size: 1.2rem;
+}
+
+#content h1{
+    text-align: center;
+    color: var(--primary);
+    text-shadow: 10px 14px 20px rgb(0,0,0,70%);
+    margin-bottom: 2.4rem;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+#content h2{
+    margin-bottom: 2.1rem;
+}
+
+#content h3{
+    margin-bottom: 1.8rem;
+}
+
+#content h4 , 
+#content p{
+    margin-bottom: 1.5rem;
+    line-height: 2;
+}
+
+#content p{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.sign-in{
+    background: url('/assets/google-dark.png');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    width: 191px;
+    height: 45px;
+    transition: all 300ms ease-in-out;
+    margin: 0 var(--mx-normal);
+}
+
+.sign-in:hover{
+    transform: translateY(-7%);
+}
+
+.sign-in:active{
+    background: url('/assets/google-light.png');
+}
+
+.me{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.me::before{
+    content: '(';
+}
+
+.me::after{
+    content: ')';
+}
+
+.sign-out::after{
+    content: '';
+    display: none;
+}

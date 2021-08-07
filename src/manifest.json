@@ -3,22 +3,22 @@
     "name": "VMs | stories by vikas",
     "icons": [
         {
-            "src": "/assets/manifest-icon-192.png",
+            "src": "/assets/app-icons/manifest-icon-192.png",
             "type": "image/png",
             "sizes": "192x192",
             "purpose": "any maskable"
         },
         {
-            "src": "/assets/manifest-icon-512.png",
+            "src": "/assets/app-icons/manifest-icon-512.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "any maskable"
         }
     ],
     "start_url": "/",
-    "background_color": "#12181b",
-    "display": "standalone",
+    "background_color": "#212529",
+    "display": "fullscreen",
     "scope": "/",
-    "theme_color": "#12181b",
+    "theme_color": "#212529",
     "description": "Stories by vikas"
 }

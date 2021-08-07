@@ -1,8 +1,17 @@
 ---
-layout: 'base.njk'
-header: [<link rel="stylesheet" href="/css/blog.css">]
+layout: "base.njk"
+story_active: "active"
 ---
 
-<div class="content-area">
-  {{ content | safe }}
-</div>
+<section id="content" class="mb-5 mx-auto">
+
+  <div class="mx-auto mb-4" style="max-width: fit-content;">
+    <img class="img-fluid" src="{{ img }}" title="{{ imgAlt }}" alt="{{ imgAlt }}" />
+  </div>
+
+  {% if released %}
+    {{ content | safe }}
+  {% else %}
+    <h1 class="text-center text-myprimary">Releasing On : <span class="badge bg-myprimary">{{ relDate }}</span></h1>
+  {% endif %}
+</section>

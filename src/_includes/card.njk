@@ -1,16 +1,23 @@
-<div class="card">
-      
-    <div class="card-left">
-      <h2><a href="{{ story.url }}">{{ story.data.title }} </a></h2>
-
-      <h3 class="short-desc">{{ story.data.description }}</h3>
-
-      <a href="{{ story.url }}" class="read-story">Read the story</a>
-
+<div class="col">
+    <div class="card shadow-lg bg-dark mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-12 col-lg-6">
+          <a href="{{ story.url | url }}"><img src="{{ story.data.img }}" class="img-fluid rounded-start" alt="{{ story.data.imgAlt }}" title="{{ story.data.imgAlt }}"></a>
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title fs-4 mb-4">{{ story.data.title }}</h5>
+            <p class="card-text">
+                {{ story.data.description }} <br>
+                {% if story.data.released %}
+                <a class="btn btn-myprimary fw-bold" href="{{ story.url | url }}">Read The Story</a>
+                {% else %}
+                Releasing On : <span class="text-myprimary fw-bold">{{ story.data.relDate }}</span>
+                {% endif %}
+            </p>
+            <p class="card-text"><small class="text-muted">By {{ story.data.author }} <br> {{ story.data.relDate }}</small></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card-right">
-        {% if story.data.img %}
-            <a href="{{ story.url }}"><img src="{{ story.data.img }}" alt="{{ story.data.imgAlt }}"></a>
-        {% endif %}
-    </div>
-</div>
+  </div>

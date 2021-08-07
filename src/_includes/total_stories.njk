@@ -1,0 +1,5 @@
+{% for story in collections.story %}
+    {% if loop.last %}
+      <h5 class="mt-2 mb-4">Total Stories In My Collection: <span class="badge bg-myprimary">{{ loop.index }}</span> <strong>(More Coming Soon)</strong></h5>
+    {% endif %}
+{% endfor %}

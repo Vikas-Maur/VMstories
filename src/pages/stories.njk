@@ -1,0 +1,39 @@
+---
+title: All Stories
+story_active: 'active'
+---
+<div id="all-stories" class="card-section">
+
+  <section class="mb-5">
+    <div class="section-label mb-4">
+      <h1>Featured Story</h1>
+      <div class="under-line rounded"></div>
+    </div>
+    {% for story in collections.featured %}
+
+    {% include 'ftcard.njk' %}
+
+    {% endfor %}
+  </section>
+
+
+  <section class="mb-5">
+    <div class="section-label mb-4">
+      <h1>More Stories</h1>
+      <div class="under-line rounded"></div>
+    </div>
+
+    {% include 'total_stories.njk' %}
+
+    <div id="story-cards" class="row row-cols-1 row-cols-md-2 g-4">
+      {% for story in collections.story | reverse %}
+
+      {{ loop.counter }}
+
+      {% include 'card.njk' %}
+
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

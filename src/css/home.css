@@ -1,0 +1,25 @@
+#hero-section{
+    margin-bottom: 100px;
+}
+
+#hero-section h1{
+    font-size: clamp(4rem,4.3rem,4.5rem);
+    color: var(--primary);
+}
+
+#hero-section div{
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 500ms ease-in-out;
+}
+
+#hero-section div:hover{
+    transform: scale(1.03);
+}
+
+#hero-section div h2{
+    font-size: clamp(2.9rem,3.2rem,3.5rem);
+}
+
+#hero-section div h4{
+    font-size: clamp(1.6rem,1.8rem,2rem);
+}

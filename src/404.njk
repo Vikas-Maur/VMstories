@@ -4,20 +4,21 @@ description: This is 404 Page For VMs | Stories by vikas
 layout: 'base.njk'
 url: '/404.html'
 permalink: "404.html"
-header: [<link rel="stylesheet" href="/css/cards.css">]
 ---
 
-<div class="container large-mb">
-    <h1 class="large-mb error-404">404 ERROR (or) $)$ ERROR 😥</h1>
-    <h2 class="large-mb">SORRY !!! BUT THE URL DOES NOT EXISTS  😟.</h2>
-    <h2 class="large-mb">BUT NO WORRIES 😊 . <br> GO TO HOMEPAGE (OR) START READING A STORY.</h2>
+<div class="container mb-5">
+    <h1 class="text-center mb-4 text-danger">404 ERROR (or) $)$ ERROR 😥</h1>
+    <h3 class="mb-4 text-lighter">Sorry !!! But the url does not exists  😟. <br> But no worries 😊 . <br> Go to homepage (OR) start reading a story.</h3>
 
-    <a class="go-to-homepage" href="/">GO TO HOMEPAGE</a>
+    <a class="btn btn-myprimary text-light fw-bold" href="/">GO TO HOMEPAGE</a>
 </div>
 
-<div id="all-stories" class="card-section">
+<div id="story-cards">
 
-    <h1 style="text-align: center;">Or Read A Story</h1>
+  <div class="section-label mb-4">
+    <h1>Stories For You</h1>
+    <div class="under-line rounded"></div>
+  </div>
 
   {% for story in collections.story | reverse %}
 

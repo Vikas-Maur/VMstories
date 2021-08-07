@@ -1,29 +1,35 @@
-<header>
-    <nav class="navbar">
-        <div class="brand-name">
-            <h1>
-                <a href="/">
-                    {% include "logo.njk" %}
-
-                    <small> stories by vikas</small>
-                </a>
-            </h1>
-        </div>
-        <ul class="nav-links hide-nav-links">
-            <li class="nav-link"><a href="/">Home</a></li>
-            <li class="nav-link"><a href="/#all-stories">More Stories</a></li>
-            <li class="nav-link"><button class="sign-in" aria-label="Sign In With Google"></button></li>
-            <li class="nav-link signed-in d-none">
-                <button class="sign-out" aria-label="Sign out">
-                    <img class="user-img">Sign Out
-                </button>
-            </li>
-        </ul>
-        <button class="hamburger">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-            </svg>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark my-shadow p-3 sticky-top">
+  <div class="container-fluid">
+    <a title="VMs | stories by vikas" class="navbar-brand fw-bold" href="/">{% include "logo.njk" %} <small class="text-muted">stories by vikas</small></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+          <a class="nav-link {{ home_active }}" href="/">Home</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ story_active }}" href="/pages/stories">More Stories</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ about_active }}" href="/pages/about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{ contact_active }}" href="/pages/contact">Contact Me</a>
+        </li>
+      </ul>
+      <button class="btn sign-in" aria-label="Sign In With Google"></button>
+      <div class="dropdown d-none account-dropdown">
+        <button style="padding: 0;" class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <img alt="User Image" title="User Image" class="user-img rounded-circle img-fluid" style="max-width: 30%;">
         </button>
-    </nav>
-</header>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+          <li><button class="btn btn-outline-dark dropdown-item sign-out">Sign Out</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

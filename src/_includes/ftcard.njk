@@ -1,0 +1,22 @@
+<div class="card bg-dark my-shadow">
+    <div class="row g-0">
+        <div class="col-12 col-md-5 col-lg-4">
+            <a href="{{ story.url | url }}"><img src="{{ story.data.img }}" class="img-fluid rounded-start img-thumbnail" alt="{{ story.data.imgAlt }}"
+                title="{{ story.data.imgAlt }}"></a>
+        </div>
+        <div class="col">
+            <div class="card-body fs-5 p-5">
+                <h5 class="fs-1 card-title">{{ story.data.title }}</h5>
+                <p class="fs-4 card-text">
+                    {{ story.data.description }} <br>
+                    {% if story.data.released %}
+                    <a class="btn btn-myprimary fw-bold" href="{{ story.url | url }}">Read The Story</a>
+                    {% else %}
+                    <p class="badge bg-dark my-shadow p-4 fs-5"> Releasing On : <br> <span class="text-myprimary fw-bold">{{ story.data.relDate }}</span></p>
+                    {% endif %}
+                </p>
+                <p class="card-text"><small class="text-muted">By {{ story.data.author }} <br> {{ story.data.relDate }}</small></p>
+            </div>
+        </div>
+    </div>
+</div>

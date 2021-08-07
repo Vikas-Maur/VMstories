@@ -1,4 +1,5 @@
 {
     "tags":"story",
-    "layout":"story.njk"
+    "layout":"story.njk",
+    "released":false
 }
