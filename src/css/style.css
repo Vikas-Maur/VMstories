@@ -1,154 +1,156 @@
-:root{
-    --primary: rgb(0, 128, 128);
-    --lighter-primary: rgba(0,128,128,0.7);
+:root {
+  --primary: rgb(0, 128, 128);
+  --lighter-primary: rgba(0, 128, 128, 0.7);
 
-    --shadow : rgba(0, 0, 0, 0.7) 0px 0px 20px 1px;
+  --light-dark: hsl(210, 11%, 20%);
+
+  --shadow: rgba(0, 0, 0, 0.7) 0px 0px 20px 1px;
 }
 
-body{
-    font-family: "Nunito",sans-serif;
-    overflow-x: hidden;
+body {
+  font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
-::selection{
-    background-color: var(--primary);
-    color: white;
+::selection {
+  background-color: var(--primary);
+  color: white;
 }
 
-.text-lighter{
-    color: rgba(255, 255, 255, 0.7);
+.text-lighter {
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.bg-myprimary{
-    background-color: var(--primary);
+.bg-myprimary {
+  background-color: var(--primary);
 }
 
-.text-myprimary{
-    color: var(--primary);
+.text-myprimary {
+  color: var(--primary);
 }
 
-.btn-myprimary{
-    background-color: var(--primary);
+.btn-myprimary {
+  background-color: var(--primary);
 }
 
-.btn-myprimary:hover{
-    background-color: var(--lighter-primary);
+.btn-myprimary:hover {
+  background-color: var(--lighter-primary);
 }
 
-.navbar-brand{
-    color: var(--primary) !important;
+.navbar-brand {
+  color: var(--primary) !important;
 }
 
-.navbar-brand svg{
-    width: 40px;
-    height: 40px;
+.navbar-brand svg {
+  width: 40px;
+  height: 40px;
 }
 
-.navbar a{
-    overflow: hidden;
-    position: relative;
+.navbar a {
+  overflow: hidden;
+  position: relative;
 }
-.navbar a::after{
-    content: '';
-    position: absolute;
-    bottom: 0px;
-    left: -10px;
-    height: 3px;
-    width: 0%;
-    background-color: var(--primary);
-    transition: width 500ms ease-in-out;
-}
-
-.navbar a:hover::after{
-    width: 110%;
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: -10px;
+  height: 3px;
+  width: 0%;
+  background-color: var(--primary);
+  transition: width 500ms ease-in-out;
 }
 
-.my-shadow{
-    box-shadow:  var(--shadow);
+.navbar a:hover::after {
+  width: 110%;
 }
 
-.section-label .under-line{
-    height: 4px;
-    width: 10%;
-    background-color: var(--primary);
+.my-shadow {
+  box-shadow: var(--shadow);
 }
 
-#wrapper{
-    margin-bottom: 200px;
+.section-label .under-line {
+  height: 4px;
+  width: 10%;
+  background-color: var(--primary);
 }
 
-#story-cards .card{
-    transition: transform 300ms ease-in-out;
+#wrapper {
+  margin-bottom: 200px;
 }
 
-#story-cards .card:hover{
-    transform: translateY(-5%);
+#story-cards .card {
+  transition: transform 300ms ease-in-out;
 }
 
-#content{
-    max-width: 60ch;
-    font-size: 1.2rem;
+#story-cards .card:hover {
+  transform: translateY(-5%);
 }
 
-#content h1{
-    text-align: center;
-    color: var(--primary);
-    text-shadow: 10px 14px 20px rgb(0,0,0,70%);
-    margin-bottom: 2.4rem;
-    font-size: 3rem;
-    font-weight: bolder;
+#content {
+  max-width: 60ch;
+  font-size: 1.2rem;
 }
 
-#content h2{
-    margin-bottom: 2.1rem;
+#content h1 {
+  text-align: center;
+  color: var(--primary);
+  text-shadow: 10px 14px 20px rgb(0, 0, 0, 70%);
+  margin-bottom: 2.4rem;
+  font-size: 3rem;
+  font-weight: bolder;
 }
 
-#content h3{
-    margin-bottom: 1.8rem;
+#content h2 {
+  margin-bottom: 2.1rem;
 }
 
-#content h4 , 
-#content p{
-    margin-bottom: 1.5rem;
-    line-height: 2;
+#content h3 {
+  margin-bottom: 1.8rem;
 }
 
-#content p{
-    color: rgba(255, 255, 255, 0.8);
+#content h4,
+#content p {
+  margin-bottom: 1.5rem;
+  line-height: 2;
 }
 
-.sign-in{
-    background: url('/assets/google-dark.png');
-    background-size: cover;
-    border: none;
-    cursor: pointer;
-    width: 191px;
-    height: 45px;
-    transition: all 300ms ease-in-out;
-    margin: 0 var(--mx-normal);
+#content p {
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.sign-in:hover{
-    transform: translateY(-7%);
+.sign-in {
+  background: url("/assets/google-dark.png");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  width: 191px;
+  height: 45px;
+  transition: all 300ms ease-in-out;
+  margin: 0 var(--mx-normal);
 }
 
-.sign-in:active{
-    background: url('/assets/google-light.png');
+.sign-in:hover {
+  transform: translateY(-7%);
 }
 
-.me{
-    color: rgba(255, 255, 255, 0.5);
+.sign-in:active {
+  background: url("/assets/google-light.png");
 }
 
-.me::before{
-    content: '(';
+.me {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.me::after{
-    content: ')';
+.me::before {
+  content: "(";
 }
 
-.sign-out::after{
-    content: '';
-    display: none;
+.me::after {
+  content: ")";
+}
+
+.sign-out::after {
+  content: "";
+  display: none;
 }
