@@ -1,7 +1,7 @@
 ---
 title: The Love Story | By Vikas
 description: A beautiful love story
-url: the-love-story
+url: story/the-love-story
 relDate: 15th August 2021
 author: Vikas
 img: /assets/story/the-love-story.png
