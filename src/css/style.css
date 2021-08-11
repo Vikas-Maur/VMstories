@@ -9,7 +9,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 ::selection {
@@ -97,7 +97,7 @@ body {
   color: var(--primary);
   text-shadow: 10px 14px 20px rgb(0, 0, 0, 70%);
   margin-bottom: 2.4rem;
-  font-size: 3rem;
+  font-size: clamp(2.5rem,2.75rem,3rem);
   font-weight: bolder;
 }
 
@@ -140,6 +140,7 @@ body {
 
 .me {
   color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1rem;
 }
 
 .me::before {
@@ -153,4 +154,41 @@ body {
 .sign-out::after {
   content: "";
   display: none;
+}
+
+blockquote {
+  font-size: larger;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote::before{
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote::after{
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.1em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
+
+@media(min-width:991px){
+  #share-dialog{
+    position: fixed;
+    left: 0;
+    top: 13%;
+    margin-left: 10px;
+  }
 }

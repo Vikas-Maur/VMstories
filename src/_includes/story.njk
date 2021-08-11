@@ -3,17 +3,24 @@ layout: "base.njk"
 story_active: "active"
 ---
 
-<div class="container my-4">
-  <section id="content" class="mb-5 mx-auto">
+<div class="container my-4" style="overflow-x: hidden;">
 
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v11.0" nonce="wGvwSjaU"></script>
+
+  <section id="content" class="mb-5 mx-auto">
+    
     <div class="mx-auto mb-4" style="max-width: fit-content;">
       <img class="img-fluid" src="{{ img }}" title="{{ imgAlt }}" alt="{{ imgAlt }}" />
     </div>
+    
+    <h1>{{ title }}</h1>
+    {% include 'share_dialog.njk' %}
   
     {% if released %}
       {{ content | safe }}
     {% else %}
-      <h1 class="text-center text-myprimary">Releasing On : <span class="badge bg-myprimary">{{ relDate }}</span></h1>
+      <h2 class="fs-1 text-center text-myprimary">Releasing On : <span class="badge bg-myprimary">{{ relDate }}</span></h2>
     {% endif %}
   </section>
 </div>
