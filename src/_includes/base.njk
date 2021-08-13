@@ -127,6 +127,22 @@
 
     </script>
 
+
+    <!-- Web share api -->
+    <script>
+        const webShareBtn = document.getElementById('web-share');
+        if (navigator.share && webShareBtn){
+            webShareBtn.classList.remove('d-none');
+            webShareBtn.addEventListener('click',()=>{
+                navigator.share({
+                    title: document.title,
+                    text: '{{ description }}',
+                    url: window.location.href
+                })
+            });
+        }
+    </script>
+
     <script>
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", (user) => {

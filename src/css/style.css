@@ -113,6 +113,7 @@ body {
 #content p {
   margin-bottom: 1.5rem;
   line-height: 2;
+  letter-spacing: 0.03rem;
 }
 
 #content p {
@@ -140,7 +141,8 @@ body {
 
 .me {
   color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
+  line-height: 2;
 }
 
 .me::before {
@@ -190,5 +192,12 @@ blockquote p {
     left: 0;
     top: 13%;
     margin-left: 10px;
+  }
+}
+
+@media(min-width:765px){
+  #share-dialog{
+    max-width: 75%;
+    margin: auto;
   }
 }

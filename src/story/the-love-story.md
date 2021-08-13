@@ -14,8 +14,9 @@ header: [<link rel="stylesheet" href="/css/conversation.css">]
 
 Namaste 🙏
 
-My Name is Vikas (which means development)
+My Name is Vikas (ForYourInfo : 'vikas' means development) <br>
 and i am an Indian guy.
+![India's flag](/assets/svg/india.svg)
 
 So , as an Indian guy i grew up watching
 Indian movies.
@@ -23,16 +24,16 @@ Indian movies.
 And in a lot of Indian movies **(not all)** ,
 the story revolves around a guy (hero) 🦸‍♂️ who
 sees a beautiful woman (heroine) 🦸‍♀️ , falls in love
-with her . After few efforts done by hero 🦸‍♂️ , the
+with her . After few efforts and fights done by hero 🦸‍♂️ , the
 heroine 🦸‍♀️ accepts him and falls in love with him as well.
 
 Then starts the problem where heroine's father 🧓
-(usually a very big and powerful personality 👊 , so
-much powerful that he can even kill anyone like killing a
-bug for instance) (and yes no law can do anything to him)
-refuses hero as his daughter's partner ❌ and tries to kill hero 🦸‍♂️ .
+(usually a very big and powerful personality 👊 , who controls the full government,
+and is the decider of how much a person should live). 
+(and yes no law can do anything to him coz govt. is in his hands)
+refuses hero as his daughter's partner ❌ and tries to kill the hero 🦸‍♂️ .
 
-After a lot of tries and efforts finally the villian
+After a lot of tries and efforts , finally the villian
 ,oh sorry , the heroin's father 🧓 accepts hero 🦸‍♂️ ✅
 and the story ends happily 😃.
 
@@ -74,17 +75,14 @@ both of them:
 
 <div class='conversation'>
 
-<span>Nikhil</span> Hey! Hi Vikas.
-<div class='me'>I wanted to write 🙏**namaste** here but friends do not
-greet each other with Namaste **yet** in India , but i think friends do not say
-'hey' or 'hi' as well. They just start talking. But yeah i did it for the sake of the story.
-</div>
+<span>Nikhil</span> Namaste 🙏 Vikas.
 
-<span>Vikas</span> Hi Nikhil.
+<span>Vikas</span> Namaste 🙏 Nikhil.
 
 <div class='me'>
-I infact don't think so that i or he had said me 'hi' 
-ever.
+Although friends do start talking right away
+without saying 🙏 but yeah sometimes you need
+to do somethings to promote your culture as well.
 </div>
 
 <span>Nikhil</span> Hey Vikas , is everything okay? Means you look strange today.
@@ -92,7 +90,7 @@ ever.
 <div class='me'>
 Vikas looks strange today , coz in movies 
 hero's affection for heroine could be seen through
-his face. And yeah the same rule follows here.
+hero's face. And yeah the same rule follows here.
 </div>
 
 <span>Vikas</span> Oh! yeah . Everything's fine!!
