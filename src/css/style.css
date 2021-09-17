@@ -5,6 +5,7 @@
   --light-dark: hsl(210, 11%, 20%);
 
   --shadow: rgba(0, 0, 0, 0.7) 0px 0px 20px 1px;
+  --bs-shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
 }
 
 body {
@@ -186,18 +187,19 @@ blockquote p {
   display: inline;
 }
 
+@media(min-width:765px){
+  #share-dialog{   
+    max-width: 75%;
+  }
+}
+
 @media(min-width:991px){
   #share-dialog{
     position: fixed;
     left: 0;
     top: 13%;
     margin-left: 10px;
-  }
-}
-
-@media(min-width:765px){
-  #share-dialog{
-    max-width: 75%;
-    margin: auto;
+    box-shadow: var(--bs-shadow-lg);
+    padding: 0.5rem;
   }
 }

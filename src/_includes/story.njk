@@ -15,12 +15,13 @@ story_active: "active"
     </div>
     
     <h1>{{ title }}</h1>
+    <p class="fw-bold d-inline-block bg-myprimary p-1 rounded">By {{ author }}</p>
     {% include 'share_dialog.njk' %}
   
     {% if released %}
       {{ content | safe }}
     {% else %}
-      <h2 class="fs-1 text-center text-myprimary">Releasing On : <span class="badge bg-myprimary">{{ relDate }}</span></h2>
+      <h2 class="fs-1 text-myprimary">Releasing On : <span class="badge bg-myprimary">{{ relDate }}</span></h2>
     {% endif %}
   </section>
 </div>
